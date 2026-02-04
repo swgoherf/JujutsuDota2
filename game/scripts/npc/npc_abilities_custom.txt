@@ -1,49 +1,51 @@
-// Dota Heroes File
 "DOTAAbilities"
 {
 	"Version"		"1"
 
-	//=================================================================================================================
-	// Templar Assassin: Refraction Holdout
-	//=================================================================================================================
-	"templar_assassin_refraction_holdout"
+	"ability_blue_gojo"
 	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
-		"AbilityUnitDamageType"			"DAMAGE_TYPE_PHYSICAL"	
-
-		// Casting
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCastPoint"				"0.0 0.0 0.0 0.0"
-
-		// Time		
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCooldown"				"17.0 17.0 17.0 17.0"
-
-		// Cost
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityManaCost"				"100"
+		"BaseClass"                     "ability_lua"
+		"ScriptFile"                    "abilities/Gojo/blue_gojo"
+		"AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE"
+		"AbilityUnitTargetTeam"         "DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"         "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"AbilityCastRange"              "800"
+		"AbilityCastPoint"              "0.3"
 		
-		// Special
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilitySpecial"
+		"AbilityValues"
 		{
-			"01"
-			{
-				"var_type"					"FIELD_INTEGER"
-				"damage_absorb"				"200 300 400 500"
-			}
-			"02"
-			{
-				"var_type"					"FIELD_INTEGER"
-				"bonus_damage"				"20 40 60 80"
-			}
-			"04"
-			{
-				"var_type"					"FIELD_FLOAT"
-				"duration"					"17.0 17.0 17.0 17.0"
-			}
+			"radius"        "400"
+			"pull_duration" "0.5"
+		}
+	}
+
+	"ability_red_gojo"
+	{
+		"BaseClass"                     "ability_lua"
+		"ScriptFile"                    "abilities/Gojo/red_gojo"
+		"AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_POINT"
+		"AbilityCastRange"              "1200"
+		
+		"AbilityValues"
+		{
+			"speed"             "1000"
+			"distance"          "1200"
+			"radius"            "150"
+			"damage"            "250"
+			"detonation_delay"  "0.1"
+		}
+	}
+
+	"ability_bomb_passive"
+	{
+		"BaseClass"                     "ability_lua"
+		"ScriptFile"                    "abilities/bomb/bomb_passive"
+		"AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		
+		"AbilityValues"
+		{
+			"radius" "300"
+			"damage" "500"
 		}
 	}
 }

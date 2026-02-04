@@ -89,4 +89,18 @@
 			"XPGain"					"15"
 		}
 	}
+	"npc_dota_custom_bomb_unit"
+	{
+		"BaseClass"                     "npc_dota_creature"
+		"Model"                         "models/development/invisiblebox.vmdl"
+		"Level"                         "1"
+		"HealthBarOffset"               "-1"
+		"MaxHealth"                     "1"
+		"ArmorPhysical"                 "0"
+		"MagicalResistance"             "0"
+		"MovementCapabilities"          "DOTA_UNIT_CAP_MOVE_NONE" 
+		"AttackCapabilities"            "DOTA_UNIT_CAP_NO_ATTACK" 
+		"BoundsHullName"                "DOTA_HULL_SIZE_SMALL"
+		"Ability1"                      "ability_bomb_passive"   
+	}
 }
