@@ -25,7 +25,7 @@ function JD2:InitGameMode()
     gameMode:SetFreeCourierModeEnabled(true)
     gameMode:SetModifyGoldFilter(Dynamic_Wrap(JD2, "GoldFilter"), self)
     gameMode:SetThink("OnThink", self, "GlobalThink", 2)
-	GameRules:SetCustomGameSetupAutoLaunchDelay(5) -- не знаю работает ли не заметил
+	GameRules:SetCustomGameSetupAutoLaunchDelay(5) 
     GameRules:SetHeroSelectionTime(30)            
     GameRules:SetStrategyTime(5)                   
     -- GameRules:SetShowcaseTime()                   
